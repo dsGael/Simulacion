@@ -1,8 +1,11 @@
 input[type=button]{
-    width: 12rem;
-    height: 12rem;
-    font-size: 5rem;
+    width: 7rem;
+    height: 8rem;
+    font-size: 4rem;
+    background-color: transparent;
 }
+
+
 
 table{
     margin: 0 auto; 

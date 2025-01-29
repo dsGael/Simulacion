@@ -7,71 +7,85 @@ function turn(button) {
     console.log(button);
     button.disabled = true;
     button.value = next ? "O" : "X";
-    var check=checkWinner();
-    if(check===false){
-        next = !next;
-        document.getElementById("player").innerHTML = "Player " + (next ? "O" : "X") + " turn";
-    }else{
-        document.getElementById("player").innerHTML = "Player " + winner + " wins";
+    var verify=verificar();
+    if(verify){
+        finished();
     }
+
+    next = !next;
+   
 
 }
 
-function checkWinner() {
+function reset() {
+    document.querySelectorAll("input[type='button']").forEach(btn => {
+    btn.disabled = false;
+    btn.value = "";
+    });
+    document.getElementById("Reset").value = "Reset";
+    document.getElementById("player").innerHTML = "Player X";
+}
+
+function finished(){
+    botones=document.querySelectorAll("input[type='button']");
+    document.querySelectorAll("input[type='button']").forEach(btn => {
+        btn.disabled = true; });
+    document.getElementById("Reset").disabled = false;
     
-    var b1 = document.getElementById("b1").value;
-    var b2 = document.getElementById("b2").value;
-    var b3 = document.getElementById("b3").value;
-    var b4 = document.getElementById("b4").value;
-    var b5 = document.getElementById("b5").value;
-    var b6 = document.getElementById("b6").value;
-    var b7 = document.getElementById("b7").value;
-    var b8 = document.getElementById("b8").value;
-    var b9 = document.getElementById("b9").value;
+   
+}
 
-    if (b1 === b2 && b2 === b3 && b1 !== "") {
-        winner = b1;
+function verificar(){
+    var botones=document.querySelectorAll("input[type='button']")
+    if(botones[0].value==botones[1].value && botones[1].value==botones[2].value && botones[2].value!=""){
         win=true;
-        alert("Player " + b1 + " wins");
-        reset();
-    } else if (b4 === b5 && b5 === b6 && b4 !== "") {
-        winner = b4;
-        win=true;
-        alert("Player " + b4 + " wins");
-        reset();
-    } else if (b7 === b8 && b8 === b9 && b7 !== "") {
-        winner = b7;
-        win=true;
+        winner=botones[0].value;
+        document.getElementById("player").innerHTML = "Player "+winner+" wins";
+        
 
-        alert("Player " + b7 + " wins");
-        reset();
-    } else if (b1 === b4 && b4 === b7 && b1 !== "") {
-        winner = b1;
+    }else if(botones[3].value==botones[4].value && botones[4].value==botones[5].value && botones[5].value!=""){
         win=true;
-        alert("Player " + b1 + " wins");
-        reset();
-    } else if (b2 === b5 && b5 === b8 && b2 !== "") {
-        winner = b2;
+        winner=botones[3].value;
+        document.getElementById("player").innerHTML = "Player "+winner+" wins";
+        
+
+    }else if(botones[6].value==botones[7].value && botones[7].value==botones[8].value && botones[8].value!=""){
         win=true;
-        alert("Player " + b2 + " wins");
-        reset();
-    } else if (b3 === b6 && b6 === b9 && b3 !== "") {
-        winner = b3;
+        winner=botones[6].value;
+        document.getElementById("player").innerHTML = "Player "+winner+" wins";
+        
+
+    }else if(botones[0].value==botones[3].value && botones[3].value==botones[6].value && botones[6].value!=""){
         win=true;
-        alert("Player " + b3 + " wins");
-        reset();
-    } else if (b1 === b5 && b5 === b9 && b1 !== "") {
-        winner = b1;
+        winner=botones[0].value;
+        document.getElementById("player").innerHTML = "Player "+winner+" wins";
+        
+
+    }else if(botones[1].value==botones[4].value && botones[4].value==botones[7].value && botones[7].value!=""){
         win=true;
-        alert("Player " + b1 + " wins");
-        reset();
-    } else if (b3 === b5 && b5 === b7 && b3 !== "") {
-        winner = b3;
+        winner=botones[1].value;
+        document.getElementById("player").innerHTML = "Player "+winner+" wins";
+        
+    }else if(botones[2].value==botones[5].value && botones[5].value==botones[8].value && botones[8].value!=""){
         win=true;
-        alert("Player " + b3 + " wins");
-        reset();
+        winner=botones[2].value;
+        document.getElementById("player").innerHTML = "Player "+winner+" wins";
+        
+    }
+    else if(botones[0].value==botones[4].value && botones[4].value==botones[8].value && botones[8].value!=""){
+        win=true;
+        winner=botones[0].value;
+        document.getElementById("player").innerHTML = "Player "+winner+" wins";
+        
+    }
+    else if(botones[2].value==botones[4].value && botones[4].value==botones[6].value && botones[6].value!=""){
+        win=true;
+        winner=botones[2].value;
+        document.getElementById("player").innerHTML = "Player "+winner+" wins";
+        
     }
 
     return win;
-    
+
+
 }
