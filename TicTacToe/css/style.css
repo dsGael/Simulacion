@@ -8,10 +8,33 @@ input[type=button]{
 
 
 table{
-    margin: 0 auto; 
+    margin: 0 auto;  ;
 }
 
 h1{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.resetbtn{
+    size: 1px;
+    margin: 0 auto;
+    display: block;
+    width: 2rem;
+    height: 3rem;
+    font-style: italic;
+    
+    background-color: blue;
+}	
+
+tr:nth-child(2)::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 5px;
+    height: 5px;
+    background-color: blue;
+    z-index: 1;
+    pointer-events: none;
 }
