@@ -1,0 +1,43 @@
+# Español
+1|Palomitas|23|palomitas.png
+2|Refresco|18|refresco.png
+3|Nachos|35|nachos.png
+4|Hot Dog|30|hotdog.png
+5|Pizza|50|pizza.png
+6|Helado|25|helado.png
+7|Chocolate|20|chocolate.png
+8|Galletas|15|galletas.png
+9|Papas Fritas|28|papas.png
+10|Dulces|10|dulces.png
+11|Café|22|cafe.png
+12|Té Helado|19|tehelado.png
+13|Churros|26|churros.png
+14|Manzana Caramelizada|27|manzana.png
+15|Panque|17|panque.png
+16|Empanada|24|empanada.png
+17|Tamal|21|tamal.png
+18|Botana Mixta|29|botana.png
+19|Gelatina|14|gelatina.png
+20|Brownie|32|brownie.png
+
+# English
+1|Popcorn|23|palomitas.png
+2|Soda|18|refresco.png
+3|Nachos|35|nachos.png
+4|Hot Dog|30|hotdog.png
+5|Pizza|50|pizza.png
+6|Ice Cream|25|helado.png
+7|Chocolate|20|chocolate.png
+8|Cookies|15|galletas.png
+9|French Fries|28|papas.png
+10|Candy|10|dulces.png
+11|Coffee|22|cafe.png
+12|Iced Tea|19|tehelado.png
+13|Churros|26|churros.png
+14|Caramel Apple|27|manzana.png
+15|Pound Cake|17|panque.png
+16|Empanada|24|empanada.png
+17|Tamale|21|tamal.png
+18|Mixed Snack|29|botana.png
+19|Jelly|14|gelatina.png
+20|Brownie|32|brownie.png

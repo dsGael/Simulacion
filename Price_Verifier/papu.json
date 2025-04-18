@@ -1,0 +1,47 @@
+{
+    "spanishProducts": [
+      { "id": 1, "nombre": "Palomitas", "precio": 23, "imagen": "palomitas.png" },
+      { "id": 2, "nombre": "Refresco", "precio": 18, "imagen": "refresco.png" },
+      { "id": 3, "nombre": "Nachos", "precio": 35, "imagen": "nachos.png" },
+      { "id": 4, "nombre": "Hot Dog", "precio": 30, "imagen": "hotdog.png" },
+      { "id": 5, "nombre": "Pizza", "precio": 50, "imagen": "pizza.png" },
+      { "id": 6, "nombre": "Helado", "precio": 25, "imagen": "helado.png" },
+      { "id": 7, "nombre": "Chocolate", "precio": 20, "imagen": "chocolate.png" },
+      { "id": 8, "nombre": "Galletas", "precio": 15, "imagen": "galletas.png" },
+      { "id": 9, "nombre": "Papas Fritas", "precio": 28, "imagen": "papas.png" },
+      { "id": 10, "nombre": "Dulces", "precio": 10, "imagen": "dulces.png" },
+      { "id": 11, "nombre": "Café", "precio": 22, "imagen": "cafe.png" },
+      { "id": 12, "nombre": "Té Helado", "precio": 19, "imagen": "tehelado.png" },
+      { "id": 13, "nombre": "Churros", "precio": 26, "imagen": "churros.png" },
+      { "id": 14, "nombre": "Manzana Caramelizada", "precio": 27, "imagen": "manzana.png" },
+      { "id": 15, "nombre": "Panque", "precio": 17, "imagen": "panque.png" },
+      { "id": 16, "nombre": "Empanada", "precio": 24, "imagen": "empanada.png" },
+      { "id": 17, "nombre": "Tamal", "precio": 21, "imagen": "tamal.png" },
+      { "id": 18, "nombre": "Botana Mixta", "precio": 29, "imagen": "botana.png" },
+      { "id": 19, "nombre": "Gelatina", "precio": 14, "imagen": "gelatina.png" },
+      { "id": 20, "nombre": "Brownie", "precio": 32, "imagen": "brownie.png" }
+    ],
+    "englishProducts": [
+      { "id": 1, "name": "Popcorn", "price": 23, "img": "palomitas.png" },
+      { "id": 2, "name": "Soda", "price": 18, "img": "refresco.png" },
+      { "id": 3, "name": "Nachos", "price": 35, "img": "nachos.png" },
+      { "id": 4, "name": "Hot Dog", "price": 30, "img": "hotdog.png" },
+      { "id": 5, "name": "Pizza", "price": 50, "img": "pizza.png" },
+      { "id": 6, "name": "Ice Cream", "price": 25, "img": "helado.png" },
+      { "id": 7, "name": "Chocolate", "price": 20, "img": "chocolate.png" },
+      { "id": 8, "name": "Cookies", "price": 15, "img": "galletas.png" },
+      { "id": 9, "name": "French Fries", "price": 28, "img": "papas.png" },
+      { "id": 10, "name": "Candy", "price": 10, "img": "dulces.png" },
+      { "id": 11, "name": "Coffee", "price": 22, "img": "cafe.png" },
+      { "id": 12, "name": "Iced Tea", "price": 19, "img": "tehelado.png" },
+      { "id": 13, "name": "Churros", "price": 26, "img": "churros.png" },
+      { "id": 14, "name": "Caramel Apple", "price": 27, "img": "manzana.png" },
+      { "id": 15, "name": "Pound Cake", "price": 17, "img": "panque.png" },
+      { "id": 16, "name": "Empanada", "price": 24, "img": "empanada.png" },
+      { "id": 17, "name": "Tamale", "price": 21, "img": "tamal.png" },
+      { "id": 18, "name": "Mixed Snack", "price": 29, "img": "botana.png" },
+      { "id": 19, "name": "Jelly", "price": 14, "img": "gelatina.png" },
+      { "id": 20, "name": "Brownie", "price": 32, "img": "brownie.png" }
+    ]
+  }
+  
