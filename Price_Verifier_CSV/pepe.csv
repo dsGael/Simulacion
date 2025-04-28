@@ -1,0 +1,41 @@
+id,language,name,price,image
+1,es,Palomitas,23,palomitas.png
+2,es,Refresco,18,refresco.png
+3,es,Nachos,35,nachos.png
+4,es,Hot Dog,30,hotdog.png
+5,es,Pizza,50,pizza.png
+6,es,Helado,25,helado.png
+7,es,Chocolate,20,chocolate.png
+8,es,Galletas,15,galletas.png
+9,es,Papas Fritas,28,papas.png
+10,es,Dulces,10,dulces.png
+11,es,Café,22,cafe.png
+12,es,Té Helado,19,tehelado.png
+13,es,Churros,26,churros.png
+14,es,Manzana Caramelizada,27,manzana.png
+15,es,Panque,17,panque.png
+16,es,Empanada,24,empanada.png
+17,es,Tamal,21,tamal.png
+18,es,Botana Mixta,29,botana.png
+19,es,Gelatina,14,gelatina.png
+20,es,Brownie,32,brownie.png
+1,en,Popcorn,23,palomitas.png
+2,en,Soda,18,refresco.png
+3,en,Nachos,35,nachos.png
+4,en,Hot Dog,30,hotdog.png
+5,en,Pizza,50,pizza.png
+6,en,Ice Cream,25,helado.png
+7,en,Chocolate,20,chocolate.png
+8,en,Cookies,15,galletas.png
+9,en,French Fries,28,papas.png
+10,en,Candy,10,dulces.png
+11,en,Coffee,22,cafe.png
+12,en,Iced Tea,19,tehelado.png
+13,en,Churros,26,churros.png
+14,en,Caramel Apple,27,manzana.png
+15,en,Pound Cake,17,panque.png
+16,en,Empanada,24,empanada.png
+17,en,Tamale,21,tamal.png
+18,en,Mixed Snack,29,botana.png
+19,en,Jelly,14,gelatina.png
+20,en,Brownie,32,brownie.png

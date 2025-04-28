@@ -8,7 +8,7 @@
       codigo += event.key;
     } else {
       console.log(file);
-      buscarProductoTxt(codigo);
+      buscarProductoJSON(codigo);
       codigo = ""; // Reiniciar el código después de buscar
     }
     
@@ -36,62 +36,50 @@
       reader.onload = function (event) {
       const contenido = event.target.result;
 
-      if (file.type === 'text/plain' || file.name.endsWith('.txt')) {
-        try {
-          productosCargados = parseTXT(contenido); 
-          console.log("TXT cargado correctamente:", productosCargados);
-        } catch (error) {
-          alert("El archivo txt es inválido.");
-        }      
+      if ( file.name.endsWith('.json')) {
+        productosCargados = parseJSON(contenido);
+
       } 
       
       else {
-        alert('Formato no soportado. Solo .json, .txt o .csv');
+        alert('Formato no soportado. Solo .json');
       }
     };
 
     reader.readAsText(file);
   });
 
-  function parseTXT(txt, separator = "|") {
+  function parseJSON(jsonString) {
+    const data = JSON.parse(jsonString);
+    
     const result = {};
-    let currentLang = null;
   
-    txt.trim().split("\n").forEach(line => {
-      line = line.trim();
-  
-      if (line.startsWith("#")) {
-        currentLang = line.replace("#", "").trim();
-        result[currentLang] = {};
-        return;
-      }
-  
-      if (!line || !currentLang) return;
-  
-      const [id, nombre, precio, imagen] = line.split(separator);
-      result[currentLang][id] = {
-        id: Number(id),
-        nombre,
-        precio: Number(precio),
-        imagen
-      };
-    });
+    for (const idioma in data) {
+      result[idioma] = {};
+      data[idioma].forEach(producto => {
+        result[idioma][producto.id] = {
+          id: Number(producto.id),
+          nombre: producto.nombre,
+          precio: Number(producto.precio),
+          imagen: producto.imagen
+        };
+      });
+    }
   
     return result;
   }
   
-
-
-
-  function buscarProductoTxt(codigo) {
+  function buscarProductoJSON(codigo) {
     if (!productosCargados) {
-      alert("Primero debes cargar un archivo TXT válido.");
+      alert("Primero debes cargar un archivo JSON válido.");
       return;
     }
   
     const id = parseInt(codigo);
     const idioma = document.getElementById("toggleLanguage").checked ? "en" : "es";
-    const langKey = idioma === "es" ? "Español" : "English";
+    const langKey = idioma === "es" ? "Español" : "English"; 
+    console.log("langKey",langKey);
+    console.log("productos cargados",productosCargados); 
     const productos = productosCargados[langKey];
     console.log("productos en buscartxt",productos);
   
@@ -119,6 +107,12 @@
     }
   }
   
+  
+
+
+
+
+  
 
 
   function toggleLanguage() {
@@ -129,14 +123,14 @@
     if (idioma === "es") {
       label.textContent = "ES";
       document.getElementById("title").innerHTML = "Verificador de precios";
-      document.getElementById("fileInput-label").innerHTML = "Selecciona un archivo .txt";
+      document.getElementById("fileInput-label").innerHTML = "Selecciona un archivo .json";
       document.getElementById("instruction").innerHTML = "Presiona el código del producto y luego Enter";
       document.getElementById("productTag").innerHTML = "Producto:";
       document.getElementById("fileName").innerHTML = "Archivo:";
     } else {
       label.textContent = "EN";
       document.getElementById("title").innerHTML = "Price Verifier";
-      document.getElementById("fileInput-label").innerHTML = "Select a .txt file";
+      document.getElementById("fileInput-label").innerHTML = "Select a .json file";
       document.getElementById("instruction").innerHTML = "Press the product code and then Enter";
       document.getElementById("productTag").innerHTML = "Product:";
       document.getElementById("fileName").innerHTML = "File:";
