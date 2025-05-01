@@ -7,12 +7,11 @@ import { ProductosModule } from './productos/productos.module';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
-      port: 3306,
+      port: 3310,
       username: 'root',
-      password: 'tu_clave',
-      database: 'tu_base',
+      password: 'root',
+      database: 'productos',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true, // ⚠️ solo para desarrollo
     }),
     ProductosModule,
   ],
